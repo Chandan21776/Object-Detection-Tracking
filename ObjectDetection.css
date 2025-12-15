@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #1a1a1a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#container {
+    position: relative;
+    border: 3px solid #333;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,255,0,0.3);
+}
+
+#video, #canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 640px;
+    height: 480px;
+}
+
+#canvas {
+    pointer-events: none;
+}
+
+.controls {
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #4CAF50;
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover { background: #45a049; }
+button:disabled { background: #666; cursor: not-allowed; }
+
+#stats {
+    background: rgba(0,0,0,0.8);
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    min-width: 300px;
+}
+
+.track {
+    background: rgba(255,255,255,0.1);
+    padding: 5px 10px;
+    margin: 3px 0;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+.fps {
+    color: #4CAF50;
+    font-weight: bold;
+}
